@@ -159,11 +159,20 @@ export default {
         //   `messaging.setBackgroundMessageHandler` handler.
         const messaging = firebase.messaging();
         messaging.onMessage((payload) => {
-        // console.log('Message received. ', payload);
+        console.log('Message received. ', payload);
         this.$toast.info(payload.notification.body, payload.notification.title, this.options.info);
         
             ///
-            
+            Notification.requestPermission( permission => {
+                        let notification = new Notification(payload.notification.title, {
+                            body: payload.notification.body, // content for the alert
+                            icon: payload.notification.icon // optional image url
+                        });
+                        // link to page on clicking the notification
+                        notification.onclick = () => {
+                            window.open(payload.notification.click_action);
+                        };
+                    });
         });
 
          window.addEventListener('offline', () => {
