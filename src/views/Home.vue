@@ -36,7 +36,7 @@
                                     <div class="action-area">
                                         <!-- <div class="lgx-video-area"> -->
                                             <div class="lgx-video-area">
-                                                <a target='_blank' class="lgx-btn lgx-btn-red" href="https://sessionize.com/droidconke/">Submit a Talk</a>
+                                                <a class="lgx-btn lgx-btn-red" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a>
                                                 <a class="lgx-btn lgx-btn-orange" target="_blank" href="https://mookh.com/embed/event/94fd42dc-9c07-4ac5-a346-4dbdffbe4083">Get Your Ticket</a>
                                             </div>
                                            <div class="lgx-video-area">
