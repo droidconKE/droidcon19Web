@@ -34,27 +34,27 @@
                             <h3 class="sponsored-heading secound-heading">Organized by</h3>
                             <div class="sponsors-area sponsors-area-noshadow sponsors-area-nogap">
                                 <div class="single">
-                                    <a class="" href="#" target='_blank'><img class="organizers1"  src="assets/img/organizers/android-254.svg" alt="sponsor"/></a>
+                                    <a class="" href="https://www.meetup.com/Android254/" target='_blank'><img class="organizers1"  src="assets/img/organizers/android-254.svg" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
-                                    <a class="" href="#" target='_blank'><img class="organizers2"  src="assets/img/organizers/ihub.png" alt="sponsor"/></a>
+                                    <a class="" href="https://ihub.co.ke/" target='_blank'><img class="organizers2"  src="assets/img/organizers/ihub.png" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
-                                    <a class="" href="#" target='_blank'><img class="organizers3"  src="assets/img/organizers/kotlin.png" alt="sponsor"/></a>
+                                    <a class="" href="https://www.meetup.com/KotlinKenya/" target='_blank'><img class="organizers3"  src="assets/img/organizers/kotlin.png" alt="sponsor"/></a>
                                 </div>
                             </div>
                             <div class="sponsors-area sponsors-area-noshadow sponsors-area-nogap">
                                 <div class="single">
-                                    <a class="" href="#" target='_blank'><img class="organizers4"  src="assets/img/organizers/tiskos-kenya.svg" alt="sponsor"/></a>
+                                    <a class="" href="http://www.tiskos.com/" target='_blank'><img class="organizers4"  src="assets/img/organizers/tiskos-kenya.svg" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
                                     <a class="" href="https://appslab.co.ke" target='_blank'><img class="organizers5"  src="assets/img/organizers/apps-lab.svg" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
-                                    <a class="" href="#" target='_blank'><img class="organizers6"  src="assets/img/organizers/SophieBOT-LogoFinal.png" alt="sponsor"/></a>
+                                    <a class="" href="https://www.facebook.com/misssophiebot/" target='_blank'><img class="organizers6"  src="assets/img/organizers/SophieBOT-LogoFinal.png" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
-                                    <a class="" href="#" target='_blank'><img class="organizers7"  src="assets/img/organizers/early-camp.svg" alt="sponsor"/></a>
+                                    <a class="" href="https://earlycamp.pixieset.com/earlycampmicrosoft/" target='_blank'><img class="organizers7"  src="assets/img/organizers/early-camp.svg" alt="sponsor"/></a>
                                 </div>
                             </div>
                         </div>
