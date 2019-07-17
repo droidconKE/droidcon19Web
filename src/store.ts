@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import db from './services/Database';
+import firebase from './services/Firebase';
 
 Vue.use(Vuex);
 
@@ -10,6 +11,7 @@ export default new Vuex.Store({
     agendas : Array(),
     dayOne : Array(),
     dayTwo : Array(),
+    stars : Array(),
   },
   mutations: {
     getSpeakers: state => {
@@ -53,6 +55,20 @@ export default new Vuex.Store({
         })
         state.dayTwo = items
       })
+    },
+    getStars: state => {
+        firebase.auth().onAuthStateChanged((user) => {
+            if(user){
+                let items: any[]
+                db.collection('starred_sessions').where('user_id','==',user.uid).onSnapshot((snapshot) => {
+                    items = []
+                    snapshot.forEach((doc) => {
+                    items.push({ id: doc.id, details: doc.data() })
+                    })
+                    state.stars = items
+                })
+            }
+        })
     }
   },
   actions: {
@@ -67,6 +83,9 @@ export default new Vuex.Store({
     },
     getDayTwo: context =>{
         context.commit('getDayTwo')
+    },
+    getStars: context =>{
+        context.commit('getStars')
     }
   },
 });

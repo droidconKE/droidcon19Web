@@ -9,8 +9,8 @@
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
                                 <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">Event Schedule</h2>
-                                    <router-link class=" lgx-btn lgx-btn-orange" to="/starred">Stared Sessions</router-link>
+                                    <h2 class="heading">Stared Sessions</h2>
+                                    <a class="" href="#" @click='logout()'>Logout</a>
                                 </div>
                         
                             </div>
@@ -34,7 +34,7 @@
                                 <ul class="nav nav-pills csi-nav">
                                     <li class="active"><a data-toggle="pill" href="#home"><h3>First <span>Day</span></h3> <p><span>8 </span>Aug, 2019</p></a></li>
                                     <li><a data-toggle="pill" href="#menu1"><h3>Second <span>Day</span></h3> <p><span>9 </span>Aug, 2019</p></a></li>
-                                    <!-- <li><a data-toggle="pill" href="#menu2"><h3>Agenda</h3></a></li> -->
+                                   
                                 </ul>
                                 <div class="tab-content csi-tab-content">
 
@@ -42,7 +42,8 @@
                                     <div id="home" class="tab-pane fade in active">
 
                                         <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-                                            <div  v-for="day in dayOne" :key='day.id' class="panel panel-default lgx-panel csi-panel">
+                                            <div v-for="day in dayOne" :key='day.id' >
+                                                <div v-for="star in stars" :key='star.id' v-if="star.details.session_id == day.details.id && star.details.day === day.details.day_number && star.details.starred == true" class="panel panel-default lgx-panel csi-panel">
                                                 <div class="panel-heading" role="tab" :id="'headingOne'+day.id">
                                                     <div class="panel-title">
                                                         <a role="button" data-toggle="collapse" data-parent="#accordion1" :href="'#collapseOne'+day.id" aria-expanded="false" :aria-controls="'collapseOne'+day.id">
@@ -56,56 +57,6 @@
                                                                 <div class="schedule-info">
                                                                     <h4 class="time">{{day.details.time}} - <span>{{day.details.duration}} </span>
 
-                                                                     <i :class="['fa ',searchId(day.details.id,day.details.day_number) == true ? 'fa-star' : 'fa-star-o']" @click="favorite(day.details.id, day.details.day_number, day.details.notification_slug)"></i>
-                                                                     
-                                                                    
-                                                                    </h4>
-                                                                    <h3 class="title">{{day.details.title}}</h3>
-                                                                    <h4 class="author-info">
-                                                                        <i :style="{ color: day.details.session_color != '' ? day.details.session_color : '#000'}">#{{day.details.topic != '' ? day.details.topic: 'Android'}} |</i>
-                                                                        By 
-                                                                        <span v-for="(spk,key) in day.details.speaker_id" :key='key'>
-                                                                    <span v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" >{{speaker.details.name}} 
-                                                                        <span v-if="key+1 != day.details.speaker_id.length">, </span>
-                                                                         </span>
-                                                                    </span>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div :id="'collapseOne'+day.id" class="panel-collapse collapse " role="tabpanel" :aria-labelledby="'headingOne'+day.id">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                           {{day.details.description}}
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  {{day.details.room}} , <span>iHub</span> </h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-
-                                    </div>
-
-                                    <div id="menu1" class="tab-pane fade in ">
-
-                                       <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-                                            <div  v-for="day in dayTwo" :key='day.id' class="panel panel-default lgx-panel csi-panel">
-                                                <div class="panel-heading" role="tab" :id="'headingOne'+day.id">
-                                                    <div class="panel-title">
-                                                        <a role="button" data-toggle="collapse" data-parent="#accordion2" :href="'#collapseOne'+day.id" aria-expanded="false" :aria-controls="'collapseOne'+day.id">
-                                                            
-                                                            <div class="lgx-single-schedule csi-single-schedule">
-                                                                <div :class="['author',day.details.speaker_id.length <=1? '':'author-multi']">
-                                                                    <span v-for="spk in day.details.speaker_id" :key='spk'>
-                                                                    <img width='100' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="speaker.details.photoUrl != '' ? speaker.details.photoUrl : 'assets/img/schedule/speaker1.jpg'" alt="Speaker"/>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">{{day.details.time}} - <span>{{day.details.duration}} </span>
-                                                                    
                                                                     <i :class="['fa ',searchId(day.details.id, day.details.day_number) == true ? 'fa-star' : 'fa-star-o']" @click="favorite(day.details.id, day.details.day_number,day.details.notification_slug)"></i>
                                                                     
                                                                     </h4>
@@ -133,34 +84,64 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            </div>
                                             
                                         </div>
 
                                     </div>
 
-                                    <!-- <div id="menu2" class="tab-pane fade in ">
+                                    <div id="menu1" class="tab-pane fade in ">
 
-                                        <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
-                                            <div v-for="agenda in agendas" :key='agenda.id' :style="{ backgroundColor: agenda.details.background_color }" class="panel agendas panel-default lgx-panel csi-panel">
-                                                <div class="panel-heading" role="tab" id="headingThree">
+                                       <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                            <div v-for="day in dayTwo" :key='day.id'>
+                                                <div v-for="star in stars" :key='star.id' v-if="star.details.session_id == day.details.id && star.details.day === day.details.day_number && star.details.starred == true" class="panel panel-default lgx-panel csi-panel">
+                                                <div class="panel-heading" role="tab" :id="'headingOne'+day.id">
                                                     <div class="panel-title">
-                                                        <div class="lgx-single-schedule csi-single-schedule">
-                                                            <div class="author">
-                                                                <img :src="agenda.details.iconUrl" alt="Speaker"/>
-                                                               
+                                                        <a role="button" data-toggle="collapse" data-parent="#accordion2" :href="'#collapseOne'+day.id" aria-expanded="false" :aria-controls="'collapseOne'+day.id">
+                                                            
+                                                            <div class="lgx-single-schedule csi-single-schedule">
+                                                                <div :class="['author',day.details.speaker_id.length <=1? '':'author-multi']">
+                                                                    <span v-for="spk in day.details.speaker_id" :key='spk'>
+                                                                    <img width='100' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="speaker.details.photoUrl != '' ? speaker.details.photoUrl : 'assets/img/schedule/speaker1.jpg'" alt="Speaker"/>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="schedule-info">
+                                                                    <h4 class="time">{{day.details.time}} - <span>{{day.details.duration}}</span>
+                                                                    
+                                                                    <i :class="['fa ',searchId(day.details.id, day.details.day_number) == true ? 'fa-star' : 'fa-star-o']" @click="favorite(day.details.id, day.details.day_number,day.details.notification_slug)"></i>
+
+                                                                    </h4>
+                                                                    <h3 class="title">{{day.details.title}}</h3>
+                                                                    <h4 class="author-info">
+                                                                        <i :style="{ color: day.details.session_color != '' ? day.details.session_color : '#000'}">#{{day.details.topic != '' ? day.details.topic: 'Android'}} |</i>
+                                                                        By 
+                                                                        <span v-for="(spk,key) in day.details.speaker_id" :key='key'>
+                                                                    <span v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" >{{speaker.details.name}} 
+                                                                        <span v-if="key+1 != day.details.speaker_id.length">, </span>
+                                                                         </span>
+                                                                    </span>
+                                                                    </h4>
+                                                                </div>
                                                             </div>
-                                                            <div :style="{ backgroundColor: agenda.details.background_color }" class="agendas schedule-info">
-                                                                <h4 class="time">{{agenda.details.time}} </h4>
-                                                                <h3 class="title">{{agenda.details.title}}</h3>
-                                                            </div>
-                                                        </div>
+                                                        </a>
                                                     </div>
                                                 </div>
+                                                <div :id="'collapseOne'+day.id" class="panel-collapse collapse " role="tabpanel" :aria-labelledby="'headingOne'+day.id">
+                                                    <div class="panel-body">
+                                                        <p class="text">
+                                                           {{day.details.description}}
+                                                        </p>
+                                                        <h4 class="location"><strong>Location:</strong>  {{day.details.room}} , <span>iHub</span> </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             </div>
                                             
                                         </div>
 
-                                    </div> -->
+                                    </div>
+
+                                   
                                     
                                 </div>
                             </div>
@@ -180,8 +161,8 @@
         </div>
             <!--SCHEDULE END-->
     </section>
- 
     </section>
+ 
 </template>
 
 <script>

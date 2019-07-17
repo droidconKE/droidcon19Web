@@ -20,11 +20,11 @@
                         </div>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse lgx-collapse">
-                        <ul v-if="event_ready == true" class="nav navbar-nav lgx-nav">
+                        <ul v-if="event_ready === 'true'" class="nav navbar-nav lgx-nav">
                             <li>
-                                <a href="/" class="lgx-scroll">Home</a>
+                                <a href="/" :class="['lgx-scroll', path === '/' ? 'active' : '']">Home</a>
                             <li>
-                            <li><router-link :class="['lgx-scroll', path === '/' ? 'active' : '']" to="/about">About</router-link></li>
+                            <li><router-link to="/about">About</router-link></li>
                             <li><router-link class="lgx-scroll" to="/schedule">Schedule</router-link></li>
                             <li><router-link class="lgx-scroll" to="/speakers">Speakers</router-link></li>
                              <li><router-link class="lgx-scroll" to="/#lgx-sponsors">Sponsors</router-link></li>
@@ -119,6 +119,7 @@
     </div>
 </footer>
 <!--FOOTER END-->
+<login-modal></login-modal>
   </div>
 </template>
 
@@ -127,10 +128,14 @@ import Vue from 'vue';
 import VueIziToast from 'vue-izitoast';
 
 import 'izitoast/dist/css/iziToast.min.css';
-import firebase from './services/Firebase'
+import firebase from './services/Firebase';
+import LoginModal from '@/components/LoginModal.vue';
 
 Vue.use(VueIziToast);
 export default {
+    components: {
+        LoginModal
+    },
     data(){
         return{
             path: '/',
@@ -160,7 +165,7 @@ export default {
         //   `messaging.setBackgroundMessageHandler` handler.
         const messaging = firebase.messaging();
         messaging.onMessage((payload) => {
-        console.log('Message received. ', payload);
+        // console.log('Message received. ', payload);
         this.$toast.info(payload.notification.body, payload.notification.title, this.options.info);
         
             ///

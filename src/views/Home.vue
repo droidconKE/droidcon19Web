@@ -137,7 +137,7 @@
     <!--TRAVEL INFO END-->
     
     <!--SPONSORED-->
-<section v-if="event_ready == true">
+<section v-if="event_ready === 'true'">
     <div id="lgx-sponsors" class="lgx-sponsors">
         <div class="lgx-inner-bg">
             <div class="lgx-inner">
@@ -216,7 +216,8 @@ export default class Home extends Vue {
         // console.log(process.env.VUE_APP_APP_NAME)
     }
 
-    event_ready(){
+    get event_ready(){
+        // console.log(process.env.VUE_APP_EVENT_READY)
         return process.env.VUE_APP_EVENT_READY
     }
 }

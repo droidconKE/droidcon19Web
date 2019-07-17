@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import BootstrapVue from 'bootstrap-vue'
+import firebase from './services/Firebase';
+
+Vue.use(BootstrapVue)
 
 Vue.use(Router);
 
 const router =  new Router({
-//   mode: 'history',
+  mode: 'history',
   base: process.env.BASE_URL,
   scrollBehavior: function(to, from, savedPosition) {
     if (to.hash) {
@@ -40,24 +44,34 @@ linkExactActiveClass: "active",
         name: 'schedule',
         component: () => import('./views/Schedule.vue'),
       },
-    //   {
-    //     path: '/event-types',
-    //     name: 'event-types',
-    //     component: () => import('./views/EventTypes.vue'),
-    //   },
+      {
+        path: '/starred',
+        name: 'starred',
+        component: () => import('./views/Stared.vue'),
+        meta: {
+            protected: true
+        }
+      },
   ],
 });
 
 router.beforeEach((to, from, next) => {
-    // const currentUser = firebase.auth().currentUser;
-    // const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-  
-    // if (requiresAuth && !currentUser) next('login');
-    // else if (!requiresAuth && currentUser) next('/');
-    // else if(to.path === '/login' && currentUser)
-    //     next('/');
-    // else next();
-    next();
+    if(!to.meta.protected) { //route is public, don't check for authentication
+        next()
+    } else {  //route is protected, if authenticated, proceed. Else, login
+       firebase.auth().onAuthStateChanged((user: any) => {
+            if(user) {
+                next()
+            } else {
+                next('/schedule')
+                const el = document.getElementsByClassName("modal-login")[0];
+                if(el){
+                    el.classList.add('in');
+                    el.style.display= 'block'
+                }
+            }
+        })
+    }
   });
 
   router.afterEach((to, from) => {
