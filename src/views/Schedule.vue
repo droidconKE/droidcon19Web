@@ -103,15 +103,17 @@
         </div>
             <!--SCHEDULE END-->
     </section>
+    <session-feedback-modal></session-feedback-modal>
  
     </section>
 </template>
 
 <script>
     import ScheduleView from '@/components/ScheduleView.vue';
+    import SessionFeedbackModal from '@/components/SessionFeedbackModal.vue';
     export default {
         components : {
-            ScheduleView
+            ScheduleView, SessionFeedbackModal
         },
       beforeCreate: function() {
         this.$store.dispatch("getAgendas");
@@ -119,6 +121,7 @@
         this.$store.dispatch("getDayTwo");
         this.$store.dispatch('getSpeakers');
         this.$store.dispatch('getStars');
+        this.$store.dispatch('getSessionReviews');
       },
       computed: {
         agendas() {

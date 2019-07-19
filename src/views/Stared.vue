@@ -87,15 +87,18 @@
         </div>
             <!--SCHEDULE END-->
     </section>
+        <session-feedback-modal></session-feedback-modal>
     </section>
  
 </template>
 
 <script>
     import ScheduleView from '@/components/ScheduleView.vue';
+    import SessionFeedbackModal from '@/components/SessionFeedbackModal.vue';
+    import firebase from './../services/Firebase.ts';
     export default {
         components : {
-            ScheduleView
+            ScheduleView, SessionFeedbackModal
         },
       beforeCreate: function() {
         this.$store.dispatch("getAgendas");
@@ -103,6 +106,7 @@
         this.$store.dispatch("getDayTwo");
         this.$store.dispatch('getSpeakers');
         this.$store.dispatch('getStars');
+        this.$store.dispatch('getSessionReviews');
       },
       computed: {
         agendas() {
@@ -121,6 +125,14 @@
            return process.env.VUE_APP_EVENT_READY;
         }
       },
+      methods: {
+          logout(){
+            firebase.auth().signOut().then(() => {
+            localStorage.setItem('authenticated', false)
+            this.$router.push('/schedule')
+        })
+          }
+      }
     };
 </script>
 <style scoped>

@@ -73,7 +73,7 @@
 
 <script lang="ts">
 import {Vue, Component} from 'vue-property-decorator';
-import AboutText from '@/components/AboutText.vue'; // @ is an alias to /src
+import AboutText from '@/components/AboutText.vue'; // ? @ is an alias to /src
 
 @Component({
   components: {

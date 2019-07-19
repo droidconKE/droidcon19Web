@@ -17,6 +17,10 @@
     import firebase from './../services/Firebase.ts';
     var firebaseui = require('firebaseui');
     import "../../node_modules/firebaseui/dist/firebaseui.css"
+
+    import Vue from 'vue';
+    import VueIziToast from 'vue-izitoast';
+    Vue.use(VueIziToast);
     
 export default {
     mounted() {
@@ -28,6 +32,7 @@ export default {
             callbacks: {
                 signInSuccessWithAuthResult() {
                     localStorage.setItem('authenticated', true)
+                    self.$toast.success('Login Successful', 'Login',{position: 'topCenter'});
                 }
             }
         }
@@ -49,7 +54,7 @@ export default {
                 el.style.display= 'none'
             }
           }
-      }
+    }
 }
 </script>
 

@@ -12,8 +12,11 @@ export default new Vuex.Store({
     dayOne : Array(),
     dayTwo : Array(),
     stars : Array(),
+    sessionReviews : Array(),
+    sessionToEvaluate: Array(),
   },
   mutations: {
+    // ! Made a mistake in naming, its shoud be updateSpeakers, this is never a getter
     getSpeakers: state => {
         let items: any[]
       db.collection('speakers').orderBy('id').onSnapshot((snapshot) => {
@@ -69,6 +72,24 @@ export default new Vuex.Store({
                 })
             }
         })
+    },
+    updateSessionReviews(state){
+        firebase.auth().onAuthStateChanged((user) => {
+            if(user){
+                let items: any[]
+                db.collection('sessionsFeedback').where('user_id','==',user.uid).onSnapshot((snapshot) => {
+                    items = []
+                    snapshot.forEach((doc) => {
+                    items.push({ id: doc.id, details: doc.data() })
+                    })
+                    state.sessionReviews = items
+                })
+            }
+        })
+    },
+    updateSessionToEvaluate (state,payload){
+        // console.log(payload)
+        return state.sessionToEvaluate = payload;
     }
   },
   actions: {
@@ -86,6 +107,9 @@ export default new Vuex.Store({
     },
     getStars: context =>{
         context.commit('getStars')
+    },
+    getSessionReviews: context =>{
+        context.commit('updateSessionReviews')
     }
   },
 });

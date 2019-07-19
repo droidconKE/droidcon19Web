@@ -28,7 +28,7 @@
                             <li><router-link class="lgx-scroll" to="/schedule">Schedule</router-link></li>
                             <li><router-link class="lgx-scroll" to="/speakers">Speakers</router-link></li>
                              <li><router-link class="lgx-scroll" to="/#lgx-sponsors">Sponsors</router-link></li>
-                            <li><a class="lgx-scroll" href="#" target="_blank">Blog</a></li>
+                            <li><a class="lgx-scroll" href="#" @click='openModal()'>Feedback</a></li>
                         </ul>
                         <ul v-else class="nav navbar-nav lgx-nav">
                             <li>
@@ -120,6 +120,7 @@
 </footer>
 <!--FOOTER END-->
 <login-modal></login-modal>
+<event-feedback></event-feedback>
   </div>
 </template>
 
@@ -130,11 +131,12 @@ import VueIziToast from 'vue-izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import firebase from './services/Firebase';
 import LoginModal from '@/components/LoginModal.vue';
+import EventFeedback from '@/components/EventFeedback.vue';
 
 Vue.use(VueIziToast);
 export default {
     components: {
-        LoginModal
+        LoginModal, EventFeedback
     },
     data(){
         return{
@@ -197,6 +199,15 @@ export default {
     updated() {
             // console.log(this.$router.currentRoute.path)
             this.path =  this.$router.currentRoute.path
+    },
+    methods : {
+        openModal(){
+            const el = document.getElementsByClassName("modal-feedback-1")[0];
+            if(el){
+                el.classList.add('in');
+                el.style.display= 'block'
+            }
+          },
     }
 }
 </script>

@@ -1,44 +1,48 @@
 <template>
     <div>
         <div class="panel-heading" role="tab" :id="'headingOne'+day.id">
-                                                    <div class="panel-title">
-                                                        <a role="button" data-toggle="collapse" data-parent="#accordion2" :href="'#collapseOne'+day.id" aria-expanded="false" :aria-controls="'collapseOne'+day.id">
-                                                            
-                                                            <div class="lgx-single-schedule csi-single-schedule">
-                                                                <div :class="['author',day.details.speaker_id.length <=1? '':'author-multi']">
-                                                                    <span v-for="spk in day.details.speaker_id" :key='spk'>
-                                                                    <img width='100' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="speaker.details.photoUrl != '' ? speaker.details.photoUrl : 'assets/img/schedule/speaker1.jpg'" alt="Speaker"/>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="schedule-info">
-                                                                    <h4 class="time">{{day.details.time}} - <span>{{day.details.duration}}</span>
-                                                                    
-                                                                    <i :class="['fa ',searchId(day.details.id, day.details.day_number) == true ? 'fa-star' : 'fa-star-o']" @click="favorite(day.details.id, day.details.day_number,day.details.notification_slug)"></i>
+            <div class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion2" :href="'#collapseOne'+day.id" aria-expanded="false" :aria-controls="'collapseOne'+day.id">
+                    
+                    <div class="lgx-single-schedule csi-single-schedule">
+                        <div :class="['author',day.details.speaker_id.length <=1? '':'author-multi']">
+                            <span v-for="spk in day.details.speaker_id" :key='spk'>
+                            <img width='100' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="speaker.details.photoUrl != '' ? speaker.details.photoUrl : 'assets/img/schedule/speaker1.jpg'" alt="Speaker"/>
+                            </span>
+                        </div>
+                        <div class="schedule-info">
+                            <h4 class="time">{{day.details.time}} - <span>{{day.details.duration}} </span>
+                            
+                            <i :class="['fa ',searchId(day.details.id, day.details.day_number) == true ? 'fa-star' : 'fa-star-o']" @click="favorite(day.details.id, day.details.day_number,day.details.notification_slug)"></i>
 
-                                                                    </h4>
-                                                                    <h3 class="title">{{day.details.title}}</h3>
-                                                                    <h4 class="author-info">
-                                                                        <i :style="{ color: day.details.session_color != '' ? day.details.session_color : '#000'}">#{{day.details.topic != '' ? day.details.topic: 'Android'}} |</i>
-                                                                        By 
-                                                                        <span v-for="(spk,key) in day.details.speaker_id" :key='key'>
-                                                                    <span v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" >{{speaker.details.name}} 
-                                                                        <span v-if="key+1 != day.details.speaker_id.length">, </span>
-                                                                         </span>
-                                                                    </span>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div :id="'collapseOne'+day.id" class="panel-collapse collapse " role="tabpanel" :aria-labelledby="'headingOne'+day.id">
-                                                    <div class="panel-body">
-                                                        <p class="text">
-                                                           {{day.details.description}}
-                                                        </p>
-                                                        <h4 class="location"><strong>Location:</strong>  {{day.details.room}} , <span>iHub</span> </h4>
-                                                    </div>
-                                                </div>
+                            </h4>
+                            <h3 class="title">{{day.details.title}}</h3>
+                            <h4 class="author-info">
+                                <i :style="{ color: day.details.session_color != '' ? day.details.session_color : '#000'}">#{{day.details.topic != '' ? day.details.topic: 'Android'}} |</i>
+                                By 
+                                <span v-for="(spk,key) in day.details.speaker_id" :key='key'>
+                                    <span v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" >{{speaker.details.name}} 
+                                        <span v-if="key+1 != day.details.speaker_id.length">, </span>
+                                    </span>
+                                </span>
+
+                                <span v-if="!searchSessionReview(day.details.id, day.details.day_number)" class="pull-right" @click="openFeedbackModal(day)">
+                                    feedback
+                                </span>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div :id="'collapseOne'+day.id" class="panel-collapse collapse " role="tabpanel" :aria-labelledby="'headingOne'+day.id">
+            <div class="panel-body">
+                <p class="text">
+                    {{day.details.description}}
+                </p>
+                <h4 class="location"><strong>Location:</strong>  {{day.details.room}} , <span>iHub</span> </h4>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -56,13 +60,18 @@ export default {
         speakers(){
             return this.$store.state.speakers
         },
+        sessionReviews()
+        {
+            return this.$store.state.sessionReviews
+        },
     },
     methods: {
           favorite(id, day, topic){
               var vm = this;
-              console.log(topic)
+            //   console.log(topic)
               firebase.auth().onAuthStateChanged((user) => {
                 if(user) {
+                    // ? test the color
                     // console.log(user)
                     // console.log(id)
                     // console.log(day)
@@ -115,11 +124,46 @@ export default {
                 el.style.display= 'none'
             }
           },
+          closeFeedbackModal(){
+            const el = document.getElementsByClassName("modal-feedback")[0];
+            if(el){
+                // console.log(el)
+                el.classList.remove('in');
+                el.style.display= 'none'
+            }
+          },
+          openFeedbackModal(day){
+              firebase.auth().onAuthStateChanged((user) => {
+                if(user) {
+                    this.$store.commit('updateSessionToEvaluate', {day})
+                    const el = document.getElementsByClassName("modal-feedback")[0];
+                    if(el){
+                        el.classList.add('in');
+                        el.style.display= 'block'
+                    }
+                }else{
+                    this.closeFeedbackModal()
+                    this.openModal()
+                    return
+                }
+              })
+            },
           searchId(id, day){
             let arr = this.stars
             // console.log(day)
 
             let obj = arr.find(data => data.details.session_id == id && data.details.day === day && data.details.starred == true);
+            // console.log(obj)
+            if(obj){
+                return true
+            }else{
+                return false
+            }
+          },
+          searchSessionReview(id, day){
+            let arr = this.sessionReviews
+            // console.log(arr)
+            let obj = arr.find(data => data.details.session_id == id && data.details.day_number === day);
             // console.log(obj)
             if(obj){
                 return true
