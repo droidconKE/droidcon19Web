@@ -5,9 +5,9 @@
 npm install
 ```
 
-## Enviroment setup
+### Enviroment setup
 ```
-copy .env.example to .env 
+cp .env.example .env 
 ```
 and add credentials accordingly
 

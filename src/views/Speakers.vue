@@ -35,7 +35,7 @@
                                     </div>
                                     <figcaption>
                                         <div class="social-group">
-                                            <a class="sp-tw" :href="'https://twitter.com/'+speaker.details.twitterHandle"><i class="fa fa-twitter"></i></a>
+                                            <a class="sp-tw" target="_blank" :href="'https://twitter.com/'+speaker.details.twitterHandle"><i class="fa fa-twitter"></i></a>
                                             <!-- <a class="sp-fb" href="##"><i class="fa fa-facebook"></i></a>
                                             <a class="sp-insta" href="##"><i class="fa fa-instagram"></i></a>
                                             <a class="sp-in" href="##"><i class="fa fa-linkedin"></i></a> -->
@@ -44,7 +44,7 @@
                                             <h3 class="title"><a href="#">{{speaker.details.name}}</a></h3>
                                             <h4 class="subtitle company">{{speaker.details.bio != '' ? speaker.details.bio : 'We don\'t know you'}} </h4>
                                              <h4 class="subtitle company">{{speaker.details.company != '' ? speaker.details.company : 'Android254'}} </h4>
-                                            <h4 class="subtitle twitter"><a class="twitter" :href="'https://twitter.com/'+speaker.details.twitterHandle"><i class="fa fa-twitter"></i>{{speaker.details.twitterHandle}}</a> </h4>
+                                            <h4 class="subtitle twitter"><a target="_blank" class="twitter" :href="'https://twitter.com/'+speaker.details.twitterHandle"><i class="fa fa-twitter"></i>{{speaker.details.twitterHandle}}</a> </h4>
                                         </div>
                                     </figcaption>
                                 </figure>
