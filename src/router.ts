@@ -65,9 +65,11 @@ router.beforeEach((to, from, next) => {
             } else {
                 next('/schedule')
                 const el = document.getElementsByClassName("modal-login")[0];
+                // (document.querySelector(',modal-login') as HTMLElement).style.color = 'red';
                 if(el){
                     el.classList.add('in');
-                    el.style.display= 'block'
+                    (document.querySelector('.modal-login') as HTMLElement).style.display = 'block';
+                    // el.style.display= 'block'
                 }
             }
         })

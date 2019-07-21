@@ -52,11 +52,11 @@ messaging.onTokenRefresh(function() {
   }
   
   function isTokenSentToServer() {
-    return window.localStorage.getItem('sentToServer') === '1';
+    return window.localStorage.getItem('sentToServer1') === '1';
   }
   
   function setTokenSentToServer(sent: boolean) {
-    window.localStorage.setItem('sentToServer', sent ? '1' : '0');
+    window.localStorage.setItem('sentToServer1', sent ? '1' : '0');
   }
 
     
