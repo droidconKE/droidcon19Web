@@ -22,6 +22,12 @@ linkExactActiveClass: "active",
 // linkActiveClass: "active",
   routes: [
     {
+        path: '*', // or '/index.html'
+        beforeEnter: (to, from, next) => {
+          next('/')
+        }
+      },
+    {
       path: '/',
       name: 'home',
       component: Home,
