@@ -19,7 +19,7 @@ export default new Vuex.Store({
     // ! Made a mistake in naming, its shoud be updateSpeakers, this is never a getter
     getSpeakers: state => {
         let items: any[]
-      db.collection('speakers').orderBy('id').onSnapshot((snapshot) => {
+      db.collection('speakers2019').orderBy('id').onSnapshot((snapshot) => {
         items = []
         snapshot.forEach((doc) => {
           items.push({ id: doc.id, details: doc.data() })

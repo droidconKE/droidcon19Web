@@ -35,6 +35,7 @@
                                 <a href="/" :class="['lgx-scroll', path === '/' ? 'active' : '']">Home</a>
                             <li>
                                 <li><router-link class="lgx-scroll" to="/about">About</router-link></li>
+                            <li><router-link class="lgx-scroll" to="/speakers">Speakers</router-link></li>
                             <li><a class="lgx-scroll" href="https://mookh.com/embed/event/94fd42dc-9c07-4ac5-a346-4dbdffbe4083" target="_blank">Get Your Ticket</a></li>
                             <!-- <li><a class="lgx-scroll" href="https://sessionize.com/droidconke/" target="_blank">Submit A Talk</a></li> -->
                             <li><a class="lgx-scroll" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a></li>

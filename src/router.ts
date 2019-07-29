@@ -1,10 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import BootstrapVue from 'bootstrap-vue'
 import firebase from './services/Firebase';
 
-Vue.use(BootstrapVue)
 
 Vue.use(Router);
 

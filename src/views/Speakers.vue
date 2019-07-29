@@ -31,7 +31,7 @@
                             <div class=" csi-single-speaker">
                                 <figure>
                                     <div class="thumb">
-                                    <img class=" imaged" width="360"  :src="[speaker.details.photoUrl != '' ? speaker.details.photoUrl : 'assets/img/speakers/speaker3.jpg']" alt="speaker"/>
+                                    <img class=" imaged"  :src="[speaker.details.photoUrl != '' ? speaker.details.photoUrl : 'assets/img/speakers/speaker3.jpg']" alt="speaker"/>
                                     </div>
                                     <figcaption>
                                         <div class="social-group">
@@ -42,9 +42,26 @@
                                         </div>
                                         <div class="speaker-info">
                                             <h3 class="title"><a href="#">{{speaker.details.name}}</a></h3>
-                                            <h4 class="subtitle company">{{speaker.details.bio != '' ? speaker.details.bio : 'We don\'t know you'}} </h4>
+                                            <!-- <h4 class="subtitle company">{{speaker.details.bio != '' ? speaker.details.bio : 'We don\'t know you'}} </h4> -->
                                              <h4 class="subtitle company">{{speaker.details.company != '' ? speaker.details.company : 'Android254'}} </h4>
+                                             <h4 class="subtitle company">
+                                                 <a href="#" class="bio" @click="openModal(speaker.id)">See Bio</a>
+                                             </h4>
                                             <h4 class="subtitle twitter"><a target="_blank" class="twitter" :href="'https://twitter.com/'+speaker.details.twitterHandle"><i class="fa fa-twitter"></i>{{speaker.details.twitterHandle}}</a> </h4>
+
+                                            <modal :name="speaker.id" height='auto' :scrollable="true">
+                                                <div class='row'>
+                                                    <div class='col-md-10 col-md-offset-1'>
+                                                         <h3>{{speaker.details.name}}</h3>
+                                                        <h4>Speaker Bio</h4>
+                                                        <p>
+                                                            {{speaker.details.bio}}
+                                                        </p>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            </modal>
+
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -81,6 +98,10 @@ export default {
          eventDay(){
             return process.env.VUE_APP_EVENT_READY;
         }
+    }, methods: {
+        openModal(name){
+            this.$modal.show(name);
+        }
     }
 }
 </script>
@@ -100,6 +121,9 @@ export default {
     font-size: 18px!important;
 }
 .thumb{
-    height: 350px;
+    height: 360px;
+}
+.bio{
+    font-size: 18px;
 }
 </style>

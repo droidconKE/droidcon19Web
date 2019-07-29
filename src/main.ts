@@ -7,6 +7,9 @@ import firebase from './services/Firebase';
 import { messaging } from './services/Messaging';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import vmodal from 'vue-js-modal'
+
+Vue.use(vmodal)
  
 Vue.use(VueAxios, axios)
 
