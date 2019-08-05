@@ -77,7 +77,7 @@ export default new Vuex.Store({
         firebase.auth().onAuthStateChanged((user) => {
             if(user){
                 let items: any[]
-                db.collection('sessionsFeedback').where('user_id','==',user.uid).onSnapshot((snapshot) => {
+                db.collection('session_feedback_2019').where('user_id','==',user.uid).onSnapshot((snapshot) => {
                     items = []
                     snapshot.forEach((doc) => {
                     items.push({ id: doc.id, details: doc.data() })

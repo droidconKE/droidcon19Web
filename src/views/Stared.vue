@@ -109,30 +109,30 @@
         this.$store.dispatch('getSessionReviews');
       },
       computed: {
-        agendas() {
+        agendas () {
           return this.$store.state.agendas;
         },
-        dayOne() {
+        dayOne () {
           return this.$store.state.dayOne;
         },
-         dayTwo() {
+         dayTwo () {
           return this.$store.state.dayTwo;
          },
-        stars(){
-            return this.$store.state.stars
+        stars (){
+            return this.$store.state.stars;
         },
-        eventDay(){
+        eventDay (){
            return process.env.VUE_APP_EVENT_READY;
-        }
+        },
       },
       methods: {
-          logout(){
+          logout (){
             firebase.auth().signOut().then(() => {
-            localStorage.setItem('authenticated', false)
-            this.$router.push('/schedule')
-        })
-          }
-      }
+            localStorage.setItem('authenticated', false);
+            this.$router.push('/schedule');
+        });
+          },
+      },
     };
 </script>
 <style scoped>

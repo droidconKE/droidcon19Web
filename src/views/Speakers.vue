@@ -29,7 +29,7 @@
                     <div v-if="eventDay" class="col-xs-12">
                             <div v-for="speaker in speakers" :key="speaker.id" class="lgx-col4 lgx-single-speaker2">
                                 <figure>
-                                    <img onerror='this.src="/assets/img/speakers/droid.png"' class=" imaged"  :src="[speaker.details.photoUrl != '' ? '/assets/img/speakers/'+speaker.details.name.replace(/ /g, '')+'.png' : 'assets/img/speakers/speaker3.jpg']" alt="speaker"/>
+                                    <img onerror='this.src="/assets/img/speakers/droid.png"' class=" imaged"  :src="[speaker.details.photoUrl != '' ? '/assets/img/speakers/'+speaker.details.name.replace(/ /g, '')+'.png' : '/assets/img/speakers/droid.png']" alt="speaker"/>
                                     <figcaption>
                                         <div class="social-group">
                                              <a class="sp-tw" target="_blank" :href="'https://twitter.com/'+speaker.details.twitterHandle"><i class="fa fa-twitter"></i></a>
@@ -161,5 +161,9 @@ export default {
 }
 .title{
     font-size: 18px!important;
+}
+.imaged{
+    min-width: 18.750em;
+    /* min-width: 300px; */
 }
 </style>

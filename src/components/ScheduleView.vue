@@ -7,7 +7,7 @@
                     <div class="lgx-single-schedule csi-single-schedule">
                         <div :class="['author',day.details.speaker_id.length <=1? '':'author-multi']">
                             <span v-for="spk in day.details.speaker_id" :key='spk'>
-                            <img width='100' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="speaker.details.photoUrl != '' ? speaker.details.photoUrl : 'assets/img/schedule/speaker1.jpg'" alt="Speaker"/>
+                            <img onerror='this.src="/assets/img/speakers/droid.png"' width='100' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="[speaker.details.photoUrl != '' ? '/assets/img/speakers/'+speaker.details.name.replace(/ /g, '')+'.png' : '/assets/img/speakers/droid.png']" alt="Speaker"/>
                             </span>
                         </div>
                         <div class="schedule-info">

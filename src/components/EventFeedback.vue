@@ -54,7 +54,7 @@ export default {
                 return
             }
             
-            db.collection("eventFeedback").add({
+            db.collection("event_feedback_2019").add({
                 eventFeedback: this.$data.form.message
             }).then(function(docRef) {
                 vm.button = 'Feedback Sent'

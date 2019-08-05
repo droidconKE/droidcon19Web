@@ -61,7 +61,7 @@ export default {
             }
             firebase.auth().onAuthStateChanged((user) => {
                 if(user){
-                    db.collection("sessionsFeedback").add({
+                    db.collection("session_feedback_2019").add({
                         day_number: this.session.day.details.day_number,
                         session_id: this.session.day.details.id,
                         session_feedback: this.$data.form.message,
