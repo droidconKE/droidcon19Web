@@ -29,7 +29,7 @@
                     <div v-if="eventDay" class="col-xs-12">
                             <div v-for="speaker in speakers" :key="speaker.id" class="lgx-col4 lgx-single-speaker2">
                                 <figure>
-                                    <img class=" imaged"  :src="[speaker.details.photoUrl != '' ? '/assets/img/speakers/'+speaker.details.name.replace(/ /g, '')+'.png' : 'assets/img/speakers/speaker3.jpg']" alt="speaker"/>
+                                    <img onerror='this.src="/assets/img/speakers/droid.png"' class=" imaged"  :src="[speaker.details.photoUrl != '' ? '/assets/img/speakers/'+speaker.details.name.replace(/ /g, '')+'.png' : 'assets/img/speakers/speaker3.jpg']" alt="speaker"/>
                                     <figcaption>
                                         <div class="social-group">
                                              <a class="sp-tw" target="_blank" :href="'https://twitter.com/'+speaker.details.twitterHandle"><i class="fa fa-twitter"></i></a>
@@ -39,9 +39,9 @@
                                             <h4 class="title"><a href="#">{{speaker.details.name}}</a></h4>
                                             <h5 class="subtitle company">{{speaker.details.company != '' ? speaker.details.company : 'Android254'}}</h5>
                                         </div>
-                                        <modal :name="speaker.id" height='auto' :scrollable="true">
+                                        <modal :name="speaker.id" :adaptive='true' height='auto' :scrollable="true">
                                             <div class='row'>
-                                                <div class='col-md-10 col-xs-10 col-xs-offset-1 col-md-offset-1'>
+                                                <div class='col-md-10 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 col-md-offset-1'>
                                                     
                                                         <h3>Speaker Details</h3>
                                                         <h4>{{speaker.details.name}}</h4>
@@ -146,9 +146,9 @@ export default {
     text-transform: lowercase!important;
     font-size: 15px!important;
 }
-/* .speaker-info{
-    height: 160px;
-} */
+.speaker-info{
+    height: 100px;
+}
 .company{
     text-transform: none!important;
     font-size: 16px!important;
