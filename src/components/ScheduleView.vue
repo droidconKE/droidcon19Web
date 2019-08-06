@@ -14,21 +14,26 @@
                             <h4 class="time">{{day.details.time}} - <span>{{day.details.duration}} </span>
                             
                             <i :class="['fa ',searchId(day.details.id, day.details.day_number) == true ? 'fa-star' : 'fa-star-o']" @click="favorite(day.details.id, day.details.day_number,day.details.notification_slug)"></i>
+                            
 
                             </h4>
                             <h3 class="title">{{day.details.title}}</h3>
                             <h4 class="author-info">
-                                <i :style="{ color: day.details.session_color != '' ? day.details.session_color : '#000'}">#{{day.details.topic != '' ? day.details.topic: 'Android'}} |</i>
+                                <i :style="{ color: day.details.session_color != '' ? day.details.session_color : '#000'}">#{{day.details.topic != '' ? day.details.topic: 'Android'}} | </i>
+                                <span class="audience" :style="{ color: day.details.session_color != '' ? day.details.session_color : '#000'}">{{day.details.session_audience}}</span> |
                                 By 
                                 <span v-for="(spk,key) in day.details.speaker_id" :key='key'>
                                     <span v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" >{{speaker.details.name}} 
                                         <span v-if="key+1 != day.details.speaker_id.length">, </span>
                                     </span>
-                                </span>
+                                </span> 
 
-                                <span v-if="!searchSessionReview(day.details.id, day.details.day_number)" class="pull-right" @click="openFeedbackModal(day)">
-                                    feedback
+                                <span v-if="day.details.start_status != 'notStarted'">
+                                    <span v-if="!searchSessionReview(day.details.id, day.details.day_number)" class="pull-right" @click="openFeedbackModal(day)">
+                                        feedback
+                                    </span>
                                 </span>
+                                
                             </h4>
                         </div>
                     </div>
@@ -40,7 +45,7 @@
                 <p class="text">
                     {{day.details.description}}
                 </p>
-                <h4 class="location"><strong>Location:</strong>  {{day.details.room}} , <span>iHub</span> </h4>
+                <h4 class="location"><strong>Room:</strong>  {{day.details.room}} , <span>iHub</span> </h4>
             </div>
         </div>
     </div>
@@ -239,3 +244,7 @@ export default {
     .styled{
         z-index: 99999;
     }
+    .audience{
+        text-transform: capitalize!important;
+    }
+</style>

@@ -163,7 +163,7 @@ export default {
     font-size: 18px!important;
 }
 .imaged{
-    min-width: 18.750em;
-    /* min-width: 300px; */
+    /* min-width: 18.750em; */
+    min-width: 300px;
 }
 </style>

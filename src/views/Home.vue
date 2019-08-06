@@ -36,7 +36,7 @@
                                     <div class="action-area">
                                         <!-- <div class="lgx-video-area"> -->
                                             <div class="lgx-video-area">
-                                                <a class="lgx-btn lgx-btn-red" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a>
+                                                <!-- <a class="lgx-btn lgx-btn-red" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a> -->
                                                 <a class="lgx-btn lgx-btn-orange" target="_blank" href="https://mookh.com/embed/event/94fd42dc-9c07-4ac5-a346-4dbdffbe4083">Get Your Ticket</a>
                                             </div>
                                            <div class="lgx-video-area">
@@ -150,16 +150,16 @@
                     <!--//main row-->
                     <div class="row">
                         <div class="col-xs-12">
-                            <h3 class="sponsored-heading first-heading">Gold Sponsors</h3>
+                            <!-- <h3 class="sponsored-heading first-heading">Gold Sponsors</h3> -->
                             <div class="sponsors-area sponsors-area-nogap sponsors-area-noshadow sponsors-area-col3"> <!--sponsors-area-col3 sponsors-area-noshadow sponsors-area-nogap sponsors-area-colorfull sponsors-area-colorfull-border sponsors-area-border-->
-                                <div class="single">
+                                <!-- <div class="single">
                                     <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor-sp3.png" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
                                     <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor-sp2.png" alt="sponsor"/></a>
-                                </div>
-                                <div class="single">
-                                    <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor3.png" alt="sponsor"/></a>
+                                </div> -->
+                                <div class="single google">
+                                    <a class="" target="_blank" href="https://www.google.com/"><img src="assets/img/sponsors/1920px-Google_2015_logo.svg.png" alt="sponsor"/></a>
                                 </div>
                             </div>
                         </div>
@@ -168,19 +168,19 @@
                     <!--//row-->
                     <div class="row">
                         <div class="col-xs-12">
-                            <h3 class="sponsored-heading secound-heading">Silver Sponsors</h3>
+                            <!-- <h3 class="sponsored-heading secound-heading">Silver Sponsors</h3> -->
                             <div class="sponsors-area sponsors-area-noshadow sponsors-area-nogap">
                                 <div class="single">
-                                    <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor4.png" alt="sponsor"/></a>
+                                    <a class="" target="_blank" href="https://andela.com/"><img src="assets/img/sponsors/Andela-logo-landscape-blue.png" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
-                                    <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor-sp1.png" alt="sponsor"/></a>
+                                    <a class="kid" target="_blank" href="#"><img src="assets/img/sponsors/flag.png" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
-                                    <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor3.png" alt="sponsor"/></a>
+                                    <a class="" target="_blank" href="https://www.usehover.com/"><img src="assets/img/sponsors/hover_logo.png" alt="sponsor"/></a>
                                 </div>
                                 <div class="single">
-                                    <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor4.png" alt="sponsor"/></a>
+                                    <a class="jet pull-right" target="_blank" href="https://www.jetbrains.com/"><img src="assets/img/sponsors/jetbrains.png" alt="sponsor"/></a>
                                 </div>
                             </div>
                         </div>
@@ -242,6 +242,19 @@ color: #774789;
     margin-top: 90px!important;
 }
 }
-
+.google{
+    width: 450px!important;
+}
+@media only screen and (max-width:768px) {
+    .google{
+        width: 300px!important;
+    }
+}
+.kid{
+    width: 100px;
+}
+.jet{
+    width: 100px;
+}
 </style>
 

@@ -41,7 +41,7 @@ export default new Vuex.Store({
     },
     getFirstDay: state => {
         let items: any[]
-      db.collection('day_one').orderBy('id').onSnapshot((snapshot) => {
+      db.collection('day_one_2019').orderBy('id').onSnapshot((snapshot) => {
         items = []
         snapshot.forEach((doc) => {
           items.push({ id: doc.id, details: doc.data() })
@@ -51,7 +51,7 @@ export default new Vuex.Store({
     },
     getDayTwo: state => {
         let items: any[]
-      db.collection('day_two').orderBy('id').onSnapshot((snapshot) => {
+      db.collection('day_two_2019').orderBy('id').onSnapshot((snapshot) => {
         items = []
         snapshot.forEach((doc) => {
           items.push({ id: doc.id, details: doc.data() })

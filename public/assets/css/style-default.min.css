@@ -8047,6 +8047,7 @@ to {
     -moz-box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .05);
     -webkit-box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .05);
     box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .05);
+    opacity: 1!important;
 }
 .sponsors-area .single a {
     display: block;
