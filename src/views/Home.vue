@@ -150,7 +150,7 @@
                     <!--//main row-->
                     <div class="row">
                         <div class="col-xs-12">
-                            <!-- <h3 class="sponsored-heading first-heading">Gold Sponsors</h3> -->
+                            <h3 class="sponsored-heading first-heading">Platinum Sponsor</h3>
                             <div class="sponsors-area sponsors-area-nogap sponsors-area-noshadow sponsors-area-col3"> <!--sponsors-area-col3 sponsors-area-noshadow sponsors-area-nogap sponsors-area-colorfull sponsors-area-colorfull-border sponsors-area-border-->
                                 <!-- <div class="single">
                                     <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor-sp3.png" alt="sponsor"/></a>
@@ -168,7 +168,7 @@
                     <!--//row-->
                     <div class="row">
                         <div class="col-xs-12">
-                            <!-- <h3 class="sponsored-heading secound-heading">Silver Sponsors</h3> -->
+                            <h3 class="sponsored-heading secound-heading">Sponsors</h3>
                             <div class="sponsors-area sponsors-area-noshadow sponsors-area-nogap">
                                 <div class="single">
                                     <a class="" target="_blank" href="https://andela.com/"><img src="assets/img/sponsors/Andela-logo-landscape-blue.png" alt="sponsor"/></a>

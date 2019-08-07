@@ -7,7 +7,7 @@
                     <div class="lgx-single-schedule csi-single-schedule">
                         <div :class="['author',day.details.speaker_id.length <=1? '':'author-multi']">
                             <span v-for="spk in day.details.speaker_id" :key='spk'>
-                            <img onerror='this.src="/assets/img/speakers/droid.png"' width='100' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="[speaker.details.photoUrl != '' ? '/assets/img/speakers/'+speaker.details.name.replace(/ /g, '')+'.png' : '/assets/img/speakers/droid.png']" alt="Speaker"/>
+                            <img onerror='this.src="/assets/img/speakers/droid.png"' v-for="speaker in speakers" :key="speaker.id" v-if="spk == speaker.details.id" :src="[speaker.details.photoUrl != '' ? '/assets/img/speakers/'+speaker.details.name.replace(/ /g, '')+'.png' : '/assets/img/speakers/droid.png']" alt="Speaker"/>
                             </span>
                         </div>
                         <div class="schedule-info">
@@ -45,7 +45,9 @@
                 <p class="text">
                     {{day.details.description}}
                 </p>
-                <h4 class="location"><strong>Room:</strong>  {{day.details.room}} , <span>iHub</span> </h4>
+                <h4 class="location"><strong>Room:</strong>  {{day.details.room}} 
+                <!-- , <span>iHub</span> -->
+                 </h4>
             </div>
         </div>
     </div>

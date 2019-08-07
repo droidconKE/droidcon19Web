@@ -10,7 +10,7 @@
                             <div class="lgx-heading-area">
                                 <div class="lgx-heading lgx-heading-white">
                                     <h2 class="heading">Event Schedule</h2>
-                                    <router-link class=" lgx-btn lgx-btn-orange" to="/starred">Stared Sessions</router-link>
+                                    <router-link class=" lgx-btn lgx-btn-orange" to="/starred">Starred Sessions</router-link>
                                 </div>
                         
                             </div>
