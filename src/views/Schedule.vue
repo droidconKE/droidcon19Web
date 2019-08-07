@@ -34,7 +34,7 @@
                                 <ul class="nav nav-pills csi-nav">
                                     <li class="active"><a data-toggle="pill" href="#home"><h3>First <span>Day</span></h3> <p><span>8 </span>Aug, 2019</p></a></li>
                                     <li><a data-toggle="pill" href="#menu1"><h3>Second <span>Day</span></h3> <p><span>9 </span>Aug, 2019</p></a></li>
-                                    <!-- <li><a data-toggle="pill" href="#menu2"><h3>Agenda</h3></a></li> -->
+                                    <li><a data-toggle="pill" href="#menu2"><h3>Agenda</h3></a></li>
                                 </ul>
                                 <div class="tab-content csi-tab-content">
 
@@ -61,7 +61,7 @@
 
                                     </div>
 
-                                    <!-- <div id="menu2" class="tab-pane fade in ">
+                                    <div id="menu2" class="tab-pane fade in ">
 
                                         <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
                                             <div v-for="agenda in agendas" :key='agenda.id' :style="{ backgroundColor: agenda.details.background_color }" class="panel agendas panel-default lgx-panel csi-panel">
@@ -83,7 +83,7 @@
                                             
                                         </div>
 
-                                    </div> -->
+                                    </div>
                                     
                                 </div>
                             </div>

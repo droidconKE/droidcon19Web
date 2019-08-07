@@ -89,6 +89,7 @@ export default {
                                 day: day,
                                 session_id: id,
                                 starred: true,
+                                slug: topic,
                                 user_id: user.uid
                             }).then(function(docRef) {
                                 console.log("Starred");

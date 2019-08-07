@@ -31,7 +31,7 @@
                                         <div id="lgx-countdown" data-date="2020/08/5"></div>
                                     </div>
                                     <h2 class="title">droidcon<i>KE </i> <span><b> 2</b><b>0</b><b>2</b><b>0</b></span></h2>
-                                    <h3 class="location"><i class="fa fa-map-marker"></i> To Be Announced </h3>
+                                    <h3 class="location"><i class="fa fa-map-marker"></i> Nairobi </h3>
                                     <h3 class="date"><i class="fa fa-calendar"></i> 5-7 August, 2020</h3>
                                     <div class="action-area">
                                         <!-- <div class="lgx-video-area"> -->
