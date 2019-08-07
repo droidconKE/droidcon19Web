@@ -54,7 +54,12 @@ linkExactActiveClass: "active",
         component: () => import('./views/Stared.vue'),
         meta: {
             protected: true
-        }
+        },
+      },
+      {
+        path: '/2020',
+        name: '2020',
+        component: () => import('./views/2020/Home.vue'),
       },
   ],
 });

@@ -26,7 +26,7 @@
                             <li>
                             <li><router-link to="/about">About</router-link></li>
                             <li><router-link class="lgx-scroll" to="/schedule">Schedule</router-link></li>
-                            <li><router-link class="lgx-scroll" to="/speakers">Speakers</router-link></li>
+                            <!-- <li><router-link class="lgx-scroll" to="/speakers">Speakers</router-link></li> -->
                              <li><router-link class="lgx-scroll" to="/#lgx-sponsors">Sponsors</router-link></li>
                             <li><a class="lgx-scroll" href="#" @click='openModal()'>Feedback</a></li>
                         </ul>
@@ -143,22 +143,59 @@ export default {
         return{
             path: '/',
             options : {
-            success: {
-                timeout: 3000,
-            },
-            error: {
-                timeout: 3000,
-            },
-            info: {
-                position: 'topCenter',
-                timeout: 0,
-                drag: false,
-                closeOnEscape: true
-            },
-            position: 'bottomCenter',
-            timeout: 5000,
-            closeOnEscape: true
-}
+                success: {
+                    timeout: 3000,
+                },
+                error: {
+                    timeout: 3000,
+                },
+                info: {
+                    position: 'topCenter',
+                    timeout: 0,
+                    drag: false,
+                    closeOnEscape: true
+                },
+                position: 'bottomCenter',
+                timeout: 5000,
+                closeOnEscape: true,
+                question: {
+                    timeout: 0,
+                    close: false,
+                    overlay: true,
+                    toastOnce: true,
+                    id: 'question',
+                    zindex: 999,
+                    position: 'bottomCenter',
+                    buttons: [
+                        ['<button><b>Allow</b></button>', function (instance, toast) {
+                            instance.hide({ transitionOut: 'fadeOut' }, toast, 'yes');
+                        }, true],
+                        ['<button>Deny</button>', function (instance, toast) {
+                            instance.hide({ transitionOut: 'fadeOut' }, toast, 'no');
+                        }]
+                    ],
+                    onClosing: function(instance, toast, closedBy){
+                        // console.log(instance)
+                        // console.log(toast)
+                        // console.info('Closing | closedBy: ' + closedBy);
+                    },
+                    onClosed: function(instance, toast, closedBy){
+                        this.installer = () => {
+                            installPrompt.prompt();
+                            installPrompt.userChoice.then(result => {
+                                if (result.outcome === "accepted") {
+                                console.log("Install accepted!")
+                                } else {
+                                console.log("Install denied!")
+                                }
+                            });
+                        };
+                        // console.log(instance)
+                        // console.log(toast)
+                        // console.info('Closed | closedBy: ' + closedBy);
+                    }
+                }
+            }
         }
     },
     created(){
@@ -191,6 +228,15 @@ export default {
             this.$toast.success('You\'re back online', 'Online',this.options.success);
         })
         // console.log(process.env.VUE_APP_EVENT_READY)
+
+        //  ? Add prompt to allow nofitications
+        let installPrompt;
+        window.addEventListener("beforeinstallprompt", e => {
+            e.preventDefault();
+            installPrompt = e;
+            // this.installBtn = "block";
+            this.$toast.success('ALlow push notifications','Notifications',this.options.question);
+        });
     },
     computed: {
         event_ready(){

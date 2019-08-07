@@ -42,9 +42,9 @@
                                 <div class="single">
                                     <a class="" href="https://www.meetup.com/KotlinKenya/" target='_blank'><img class="organizers3"  src="assets/img/organizers/kotlin.png" alt="sponsor"/></a>
                                 </div>
-                                 <!-- <div class="single">
+                                <div class="single">
                                     <a class="" href="https://www.meetup.com/KotlinKenya/" target='_blank'><img class="organizers8"  src="assets/img/organizers/kragt-digital.png" alt="sponsor"/></a>
-                                </div> -->
+                                </div>
                             </div>
                             <div class="sponsors-area sponsors-area-noshadow sponsors-area-nogap">
                                 <div class="single">
@@ -117,7 +117,7 @@ export default class About extends Vue{
     width: 50px!important;
 }
 .organizers8{
-    width: 50px!important;
+    width: 80px!important;
 }
 </style>
 
