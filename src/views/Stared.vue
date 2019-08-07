@@ -48,6 +48,13 @@
                                                 
                                                 </div>
                                             </div>
+                                            <div class="col-xs-12">
+                                                <div class="lgx-heading">
+                                                    <br>
+                                                    <p>click on the star on the session to bookmark</p>
+                                                    <router-link class=" lgx-btn lgx-btn-orange" to="/schedule">Back to Schedule</router-link>
+                                                </div>
+                                            </div>
                                             
                                         </div>
 
@@ -61,8 +68,17 @@
                                                     <schedule-view  :day='day' ></schedule-view>
                                                 
                                                 </div>
+                                                
                                             </div>
-                                            
+                                            <div>
+                                                <div class="col-xs-12">
+                                                    <div class="lgx-heading">
+                                                        <br>
+                                                        <p>click on the star to bookmark</p>
+                                                        <router-link class=" lgx-btn lgx-btn-orange" to="/schedule">Back to Schedule</router-link>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                     </div>
