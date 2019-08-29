@@ -14,106 +14,139 @@
                             <div class="lgx-photo-gallery " id='images-wrapper'>
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery title="Memories One" src="assets/img/gallery/2020/20191.JPG" alt="Memories one"/>
+                                        <img v-img:gallery title="Memories One" src="assets/img/gallery/2019/20191.jpg" alt="Memories one"/>
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20192.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20192.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20193.JPG" alt="Memories Three" title="Memories Three" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20193.jpg" alt="Memories Three" title="Memories Three" />
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20194.JPG" alt="Memories Four" title="Memories Four" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20194.jpg" alt="Memories Four" title="Memories Four" />
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20195.JPG" alt="Memories Four" title="Memories Four" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20195.jpg" alt="Memories Four" title="Memories Four" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20196.JPG" alt="Memories Five" title="Memories Five" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20196.jpg" alt="Memories Five" title="Memories Five" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20197.JPG" alt="Memories Six" title="Memories Six" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20197.jpg" alt="Memories Six" title="Memories Six" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20198.JPG" alt="Memories Five" title="Memories Five" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20198.jpg" alt="Memories Five" title="Memories Five" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20199.JPG" alt="Memories Six" title="Memories Six" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/20199.jpg" alt="Memories Six" title="Memories Six" />
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201910.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201910.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
 
 
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201911.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201911.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201912.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201912.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201913.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201913.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201914.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201914.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201915.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201915.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201916.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201916.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
 
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201917.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201917.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201918.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201918.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
-                                    
-                                        <img v-img:gallery src="assets/img/gallery/2020/201919.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2019/201919.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
-                                    
-                                        <img v-img:gallery src="assets/img/gallery/2020/201920.JPG" alt="Memories Two" title="Memories Two" />
-                                    
+                                        <img v-img:gallery src="assets/img/gallery/2019/201920.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201921.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201922.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201923.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201924.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201925.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201926.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201927.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201928.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201929.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201930.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201931.jpg" alt="Memories Two" title="Memories Two" />
+                                </div>  <!--Single photo-->
+                                <div  class="lgx-gallery-single">
+                                        <img v-img:gallery src="assets/img/gallery/2019/201932.jpg" alt="Memories Two" title="Memories Two" />
                                 </div>  <!--Single photo-->
                             </div>
                             <div class="text-center">

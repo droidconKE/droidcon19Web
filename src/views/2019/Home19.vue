@@ -37,7 +37,7 @@
                                         <!-- <div class="lgx-video-area"> -->
                                             <div class="lgx-video-area">
                                                 <!-- <a class="lgx-btn lgx-btn-red" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a> -->
-                                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="https://mookh.com/embed/event/94fd42dc-9c07-4ac5-a346-4dbdffbe4083">Get Your Ticket</a>
+                                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="http://bit.ly/droidconKE20Tickets">Get Your Ticket</a>
                                             </div>
                                            <div class="lgx-video-area">
                                                
@@ -202,7 +202,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import TravelInfo from '@/components/TravelInfo.vue'; // @ is an alias to /src
 import AboutText from '@/components/AboutText.vue';
-import Gallery from '@/components/Gallery.vue';
+import Gallery from '@/components/gallery/Gallery18.vue';
 
 @Component({
   components: {

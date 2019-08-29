@@ -8,6 +8,7 @@ module.exports = {
                 /manifest\.json$/ 
             ],
         },
-        themeColor: '#864F96'
+        themeColor: '#864F96',
+        appleMobileWebAppCapable: 'yes'  
     }
 }

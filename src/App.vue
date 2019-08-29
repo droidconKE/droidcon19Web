@@ -15,37 +15,11 @@
                         </button>
                         <div class="lgx-logo">
                             <a href="/" class="lgx-scroll">
-                                <img width='150' src="assets/img/logo.png" alt="droidconKE"/>
+                                <img width='150' src="/assets/img/logo.png" alt="droidconKE"/>
                             </a>
                         </div>
                     </div>
-                    <div id="navbar" class="navbar-collapse collapse lgx-collapse">
-                        <ul v-if="event_ready === 'true'" class="nav navbar-nav lgx-nav">
-                            <li>
-                                <a href="/" :class="['lgx-scroll', path === '/' ? 'active' : '']">Home</a>
-                            <li>
-                            <li><router-link to="/about">About</router-link></li>
-                            <li><router-link class="lgx-scroll" to="/schedule">Schedule</router-link></li>
-                            <li><router-link class="lgx-scroll" to="/speakers">Speakers</router-link></li>
-                             <li><router-link class="lgx-scroll" to="/#lgx-sponsors">Sponsors</router-link></li>
-                            <li><a class="lgx-scroll" href="#" @click='openModal()'>Feedback</a></li>
-                        </ul>
-                        <ul v-else class="nav navbar-nav lgx-nav">
-                            <li>
-                                <a href="/" :class="['lgx-scroll', path === '/' ? 'active' : '']">Home</a>
-                            <li>
-                                <li><router-link class="lgx-scroll" to="/about">About</router-link></li>
-                            <!-- <li><router-link class="lgx-scroll" to="/speakers">Speakers</router-link></li> -->
-                            <li><a class="lgx-scroll" href="https://mookh.com/embed/event/94fd42dc-9c07-4ac5-a346-4dbdffbe4083" target="_blank">Get Your Ticket</a></li>
-                            <!-- <li><a class="lgx-scroll" href="https://sessionize.com/droidconke/" target="_blank">Submit A Talk</a></li> -->
-                            <li><a class="lgx-scroll" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a></li>
-                        </ul>
-                        <!-- <div class="lgx-nav-right">
-                            <div class="lgx-cart-area">
-                                <a class="lgx-btn lgx-btn-red" href="#">Sign In</a>
-                            </div>
-                        </div> -->
-                    </div><!--/.nav-collapse -->
+                   <nav-links></nav-links>
                 </nav>
             </div>
             <!-- //.CONTAINER -->
@@ -64,14 +38,18 @@
             <div class="container">
                 <div class="lgx-footer-area">
                     <div class="lgx-footer-single">
-                        <a class="logo" href="/"><img width="200" src="assets/img/footer-logo.png" alt="Logo"></a>
+                        <a class="logo" href="/"><img width="200" src="/assets/img/footer-logo.png" alt="Logo"></a>
                     </div> <!--//footer-area-->
                     <div class="lgx-footer-single">
                         <h3 class="footer-title">Venue Details </h3>
-                        <h4 class="date">
+                        <h4 class="date" v-if="urlBar === '/2020'">
+                            6 - 8 August, 2020
+                        </h4>
+                        <h4 v-else class="date">
                             8 - 9 August, 2019
                         </h4>
-                        <a id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Senteu Plaza, iHub, Nairobi</a>
+                        <a v-if="urlBar === '/2020'" id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>  Nairobi</a>
+                        <a v-else id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Senteu Plaza, iHub, Nairobi</a>
                     </div>
                     <div class="lgx-footer-single">
                         <h3 class="footer-title">Social Connection</h3>
@@ -133,11 +111,12 @@ import 'izitoast/dist/css/iziToast.min.css';
 import firebase from './services/Firebase';
 import LoginModal from '@/components/LoginModal.vue';
 import EventFeedback from '@/components/EventFeedback.vue';
+import NavLinks from '@/components/NavLinks.vue';
 
 Vue.use(VueIziToast);
 export default {
     components: {
-        LoginModal, EventFeedback
+        LoginModal, EventFeedback, NavLinks
     },
     data(){
         return{
@@ -235,18 +214,24 @@ export default {
             e.preventDefault();
             installPrompt = e;
             // this.installBtn = "block";
-            this.$toast.success('Allow push notifications','Notifications',this.options.question);
+            // this.$toast.success('Allow push notifications','Notifications',this.options.question);
         });
     },
     computed: {
         event_ready(){
             return process.env.VUE_APP_EVENT_READY
+        },
+        urlBar(){
+            var currentUrl = window.location.pathname;
+            console.log(currentUrl)
+            return currentUrl
         }
     },
     updated() {
-            // console.log(this.$router.currentRoute.path)
+            // console.log(this.$route.path )
             this.path =  this.$router.currentRoute.path
     },
+
     methods : {
         openModal(){
             const el = document.getElementsByClassName("modal-feedback-1")[0];

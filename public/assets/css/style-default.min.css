@@ -5886,6 +5886,13 @@ to {
     -moz-background-size: cover;
     background-size: cover;
 }
+.lgx-banner-parallax-2020 {
+    background: url(../img/parallax-2019.jpg) top center no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
 #layer-wrapper, .lgx-page-inner{
     /* background-color: rgba(41, 10, 100, 0.4); */
     background-color: rgba(7, 7, 7, 0.81);

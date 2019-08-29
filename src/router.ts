@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Home from './views/2020/Home20.vue';
 import firebase from './services/Firebase';
+// import store from './store'
 
 
 Vue.use(Router);
@@ -27,40 +28,31 @@ linkExactActiveClass: "active",
       },
     {
       path: '/',
-      name: 'home',
       component: Home,
     },
     {
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () => import('./views/About.vue'),
     },
     {
-        path: '/speakers',
-        name: 'speakers',
-        component: () => import('./views/Speakers.vue'),
-      },
-      {
-        path: '/schedule',
-        name: 'schedule',
-        component: () => import('./views/Schedule.vue'),
-      },
-      {
-        path: '/starred',
-        name: 'starred',
-        component: () => import('./views/Stared.vue'),
+        path: '/2019/speakers',
+        component: () => import('./views/2019/Speakers.vue'),
+        },
+        {
+        path: '/2019/schedule',
+        component: () => import('./views/2019/Schedule.vue'),
+        },
+        {
+        path: '/2019/starred',
+        component: () => import('./views/2019/Stared.vue'),
         meta: {
             protected: true
         },
-      },
-      {
-        path: '/2020',
-        name: '2020',
-        component: () => import('./views/2020/Home.vue'),
-      },
+        },
+        {
+        path: '/2019',
+        component: () => import('./views/2019/Home19.vue'),
+        },
   ],
 });
 

@@ -164,6 +164,6 @@ export default {
 }
 .imaged{
     /* min-width: 18.750em; */
-    min-width: 300px;
+    width: 300px;
 }
 </style>

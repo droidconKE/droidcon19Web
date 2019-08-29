@@ -14,6 +14,7 @@ export default new Vuex.Store({
     stars : Array(),
     sessionReviews : Array(),
     sessionToEvaluate: Array(),
+    year: localStorage.getItem('year') || '2020',
   },
   mutations: {
     // ! Made a mistake in naming, its shoud be updateSpeakers, this is never a getter

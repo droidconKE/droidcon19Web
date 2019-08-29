@@ -111,7 +111,7 @@
 <script>
     import ScheduleView from '@/components/ScheduleView.vue';
     import SessionFeedbackModal from '@/components/SessionFeedbackModal.vue';
-    import firebase from './../services/Firebase.ts';
+    import firebase from './../../services/Firebase.ts';
     export default {
         components : {
             ScheduleView, SessionFeedbackModal

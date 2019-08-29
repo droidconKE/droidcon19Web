@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="lgx-heading">
-                                <h2 class="heading">Photos From droidconKE 2019</h2>
+                                <h2 class="heading">Photos From droidconKE 2018</h2>
                             </div>
                         </div>
 
@@ -14,110 +14,110 @@
                             <div class="lgx-photo-gallery " id='images-wrapper'>
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery title="Memories One" src="assets/img/gallery/2020/20191.JPG" alt="Memories one"/>
+                                        <img v-img:gallery title="Memories One" src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(353).jpg" alt="Memories one"/>
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20192.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(129).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20193.JPG" alt="Memories Three" title="Memories Three" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day1-4October2018-196.jpg" alt="Memories Three" title="Memories Three" />
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20194.JPG" alt="Memories Four" title="Memories Four" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(179).jpg" alt="Memories Four" title="Memories Four" />
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20195.JPG" alt="Memories Four" title="Memories Four" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day1-4October2018-119.jpg" alt="Memories Four" title="Memories Four" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20196.JPG" alt="Memories Five" title="Memories Five" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(186).jpg" alt="Memories Five" title="Memories Five" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20197.JPG" alt="Memories Six" title="Memories Six" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(224).jpg" alt="Memories Six" title="Memories Six" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20198.JPG" alt="Memories Five" title="Memories Five" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(261).jpg" alt="Memories Five" title="Memories Five" />
                                     
                                 </div> <!--Single photo-->
                                 <div class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/20199.JPG" alt="Memories Six" title="Memories Six" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(267).jpg" alt="Memories Six" title="Memories Six" />
                                     
                                 </div> <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201910.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(343).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
 
 
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201911.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(285).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201912.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(226).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201913.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(352).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201914.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(379).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201915.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(230).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201916.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day1-4October2018-233.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
 
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201917.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day1-4October2018-94.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201918.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day1-4October2018-104.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201919.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day1-4October2018-75.jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                                 <div  class="lgx-gallery-single">
                                     
-                                        <img v-img:gallery src="assets/img/gallery/2020/201920.JPG" alt="Memories Two" title="Memories Two" />
+                                        <img v-img:gallery src="assets/img/gallery/2018/DroidconKenya-Day2-5October2018(352).jpg" alt="Memories Two" title="Memories Two" />
                                     
                                 </div>  <!--Single photo-->
                             </div>
                             <div class="text-center">
-                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="https://droidconke.pixieset.com/droidconke2019/">View More Pictures</a>
+                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="https://droidconke.pixieset.com/droidconke2018/">View More Pictures</a>
                             </div>
                         </div> <!--//.COL-->
                     </div>
@@ -130,7 +130,6 @@
 <script>
 import Vue from 'vue';
 import VueImg from 'v-img';
-
 const vueImgConfig = {
   // Use `alt` attribute as gallery slide title
   altAsTitle: false,

@@ -2,7 +2,7 @@
   <div class="home">
     <!--BANNER-->
     <section>
-        <div id="lgx-parallax-banner" class="lgx-banner lgx-banner-parallax"> <!--lgx-about-bottom-->
+        <div id="lgx-parallax-banner" class="lgx-banner lgx-banner-parallax-2020"> <!--lgx-about-bottom-->
             <div class="lgx-section">
                 <div id="layer-wrapper" class="lgx-item-parallax-banner">
 
@@ -28,16 +28,16 @@
                                 <div class="lgx-banner-info lgx-banner-info-center"> <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg--> <!--banner-info-margin-->
                                     <div class="lgx-countdown-area">
                                         <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
-                                        <div id="lgx-countdown" data-date="2020/08/5"></div>
+                                        <div id="lgx-countdown" data-date="2020/08/6"></div>
                                     </div>
                                     <h2 class="title">droidcon<i>KE </i> <span><b> 2</b><b>0</b><b>2</b><b>0</b></span></h2>
                                     <h3 class="location"><i class="fa fa-map-marker"></i> Nairobi </h3>
-                                    <h3 class="date"><i class="fa fa-calendar"></i> 5-7 August, 2020</h3>
+                                    <h3 class="date"><i class="fa fa-calendar"></i> 6-8 August, 2020</h3>
                                     <div class="action-area">
                                         <!-- <div class="lgx-video-area"> -->
                                             <div class="lgx-video-area">
                                                 <a class="lgx-btn lgx-btn-red" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a>
-                                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="https://mookh.com/embed/event/94fd42dc-9c07-4ac5-a346-4dbdffbe4083">Get Your Ticket</a>
+                                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="http://bit.ly/droidconKE20Tickets">Get Your Ticket</a>
                                             </div>
                                            <div class="lgx-video-area">
                                                
@@ -111,7 +111,7 @@
                                 <div class="lgx-travelinfo-single">
                                     <!-- <img src="assets/img/info-icon1.png" alt="location"/> -->
                                     <h3 class="title">Venue</h3>
-                                    <p class="info">iHub, Santeu Plaza, Nairobi</p>
+                                    <p class="info">Nairobi</p>
                                      <a id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> View Map location</a>
                                 </div>
                                 <div class="lgx-travelinfo-single">
@@ -136,64 +136,6 @@
     </section>
     <!--TRAVEL INFO END-->
     
-    <!--SPONSORED-->
-<section v-if="event_ready === 'true'">
-    <div id="lgx-sponsors" class="lgx-sponsors">
-        <div class="lgx-inner-bg">
-            <div class="lgx-inner">
-                <div class="container">
-                     <div class="col-xs-12">
-                            <div class="lgx-heading">
-                                <h2 class="heading">Event Sponsors</h2>
-                            </div>
-                        </div>
-                    <!--//main row-->
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h3 class="sponsored-heading first-heading">Platinum Sponsor</h3>
-                            <div class="sponsors-area sponsors-area-nogap sponsors-area-noshadow sponsors-area-col3"> <!--sponsors-area-col3 sponsors-area-noshadow sponsors-area-nogap sponsors-area-colorfull sponsors-area-colorfull-border sponsors-area-border-->
-                                <!-- <div class="single">
-                                    <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor-sp3.png" alt="sponsor"/></a>
-                                </div>
-                                <div class="single">
-                                    <a class="" href="index.html#"><img src="assets/img/sponsors/sponsor-sp2.png" alt="sponsor"/></a>
-                                </div> -->
-                                <div class="single google">
-                                    <a class="" target="_blank" href="https://www.google.com/"><img src="assets/img/sponsors/1920px-Google_2015_logo.svg.png" alt="sponsor"/></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--//col-->
-                    </div>
-                    <!--//row-->
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h3 class="sponsored-heading secound-heading">Sponsors</h3>
-                            <div class="sponsors-area sponsors-area-noshadow sponsors-area-nogap">
-                                <div class="single">
-                                    <a class="" target="_blank" href="https://andela.com/"><img src="assets/img/sponsors/Andela-logo-landscape-blue.png" alt="sponsor"/></a>
-                                </div>
-                                <div class="single">
-                                    <a class="kid" target="_blank" href="#"><img src="assets/img/sponsors/flag.png" alt="sponsor"/></a>
-                                </div>
-                                <div class="single">
-                                    <a class="" target="_blank" href="https://www.usehover.com/"><img src="assets/img/sponsors/hover_logo.png" alt="sponsor"/></a>
-                                </div>
-                                <div class="single">
-                                    <a class="jet pull-right" target="_blank" href="https://www.jetbrains.com/"><img src="assets/img/sponsors/jetbrains.png" alt="sponsor"/></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--//col-->
-                    </div>
-                </div>
-                <!--//container-->
-            </div>
-        </div>
-        <!--//lgx-inner-->
-    </div>
-</section>
-<!--SPONSORED END-->
 
   </div>
 </template>
@@ -202,7 +144,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import TravelInfo from '@/components/TravelInfo.vue'; // @ is an alias to /src
 import AboutText from '@/components/AboutText.vue';
-import Gallery from '@/components/Gallery.vue';
+import Gallery from '@/components/gallery/Gallery19.vue';
 
 @Component({
   components: {
