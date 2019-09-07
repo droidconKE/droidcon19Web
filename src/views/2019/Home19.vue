@@ -137,7 +137,7 @@
     <!--TRAVEL INFO END-->
     
     <!--SPONSORED-->
-<section v-if="event_ready === 'true'">
+<section>
     <div id="lgx-sponsors" class="lgx-sponsors">
         <div class="lgx-inner-bg">
             <div class="lgx-inner">
