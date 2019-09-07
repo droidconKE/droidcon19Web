@@ -19,7 +19,7 @@
             <li><router-link to="/about">About</router-link></li>
             <li><router-link class="lgx-scroll" :to="'/'+year+'/schedule'">Schedule</router-link></li>
             <li><router-link class="lgx-scroll" :to="'/'+year+'/speakers'">Speakers</router-link></li>
-            <li><router-link class="lgx-scroll" to="/#lgx-sponsors">Sponsors</router-link></li>
+            <li><router-link class="lgx-scroll" :to="'/'+year+'#lgx-sponsors'">Sponsors</router-link></li>
             <li><a class="lgx-scroll" href="#" @click='openModal()'>Feedback</a></li>
             <li>
                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{year}} <span class="caret"></span></a>
