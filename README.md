@@ -9,7 +9,11 @@ npm install
 ```
 cp .env.example .env 
 ```
-and add credentials accordingly
+and add credentials accordingly eg firebase keys, etc
+
+### Firrbase database
+
+[Firebase DB doc](FIREBASE.MD) for db structure. 
 
 ### Compiles and hot-reloads for development
 ```
