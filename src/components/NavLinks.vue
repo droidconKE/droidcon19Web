@@ -16,7 +16,7 @@
         </ul>
         <ul v-else class="nav navbar-nav lgx-nav">
             <li><a :href="'/'+year" :class="['lgx-scroll', path === '/' ? 'active' : '']">Home</a><li>
-            <li><router-link to="/about">About</router-link></li>
+            <li><router-link :to="'/'+year+'/about'">About</router-link></li>
             <li><router-link class="lgx-scroll" :to="'/'+year+'/schedule'">Schedule</router-link></li>
             <li><router-link class="lgx-scroll" :to="'/'+year+'/speakers'">Speakers</router-link></li>
             <li><router-link class="lgx-scroll" :to="'/'+year+'#lgx-sponsors'">Sponsors</router-link></li>

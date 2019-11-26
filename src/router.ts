@@ -32,8 +32,12 @@ linkExactActiveClass: "active",
     },
     {
       path: '/about',
-      component: () => import('./views/About.vue'),
+      component: () => import('./views/2020/About.vue'),
     },
+      {
+          path: '/2019/about',
+          component: () => import('./views/2019/About.vue'),
+      },
     {
         path: '/2019/speakers',
         component: () => import('./views/2019/Speakers.vue'),

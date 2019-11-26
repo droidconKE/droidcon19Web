@@ -42,14 +42,14 @@
                     </div> <!--//footer-area-->
                     <div class="lgx-footer-single">
                         <h3 class="footer-title">Venue Details </h3>
-                        <h4 class="date" v-if="urlBar === '/2020'">
-                            6 - 8 August, 2020
-                        </h4>
-                        <h4 v-else class="date">
+                        <h4 v-if="urlBar === '/2019'" class="date">
                             8 - 9 August, 2019
                         </h4>
-                        <a v-if="urlBar === '/2020'" id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>  Nairobi</a>
-                        <a v-else id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Senteu Plaza, iHub, Nairobi</a>
+                        <h4 v-else class="date">
+                            6 - 8 August, 2020
+                        </h4>
+                        <a v-if="urlBar === '/2019'" id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Senteu Plaza, iHub, Nairobi</a>
+                        <a v-else id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" class="map-link" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>  Nairobi</a>
                     </div>
                     <div class="lgx-footer-single">
                         <h3 class="footer-title">Social Connection</h3>
