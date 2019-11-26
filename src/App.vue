@@ -116,7 +116,7 @@ import NavLinks from '@/components/NavLinks.vue';
 Vue.use(VueIziToast);
 export default {
     components: {
-        LoginModal, EventFeedback, NavLinks
+        LoginModal, EventFeedback, NavLinks,
     },
     data(){
         return{
@@ -182,24 +182,30 @@ export default {
         // - a message is received while the app has focus
         // - the user clicks on an app notification created by a service worker
         //   `messaging.setBackgroundMessageHandler` handler.
-        const messaging = firebase.messaging();
-        messaging.onMessage((payload) => {
-        // console.log('Message received. ', payload);
-        this.$toast.info(payload.notification.body, payload.notification.title, this.options.info);
-        
-            ///
-            Notification.requestPermission( permission => {
-                        let notification = new Notification(payload.notification.title, {
-                            body: payload.notification.body, // content for the alert
-                            icon: payload.notification.icon // optional image url
-                        });
-                        // link to page on clicking the notification
-                        notification.onclick = () => {
-                            window.open(payload.notification.click_action);
-                        };
-                    });
-        });
+        if(firebase.messaging.isSupported()) {
+            const messaging = firebase.messaging();
+            messaging.onMessage((payload) => {
+                // console.log('Message received. ', payload);
+                this.$toast.info(payload.notification.body, payload.notification.title, this.options.info);
 
+                ///
+                // Notification.requestPermission(permission => {
+                //     let notification = new Notification(payload.notification.title, {
+                //         body: payload.notification.body, // content for the alert
+                //         icon: payload.notification.icon // optional image url
+                //     });
+                //     // link to page on clicking the notification
+                //     notification.onclick = () => {
+                //         window.open(payload.notification.click_action);
+                //     };
+                // });
+            });
+
+            if (Notification.permission === "blocked" || Notification.permission === "denied"){
+                this.$toast.info('Kindly allow push notifications to get the latest updates from droidconKE, Go to site settings and Allow', 'Allow Notifications', this.options.info);
+            }
+
+        }
          window.addEventListener('offline', () => {
             this.$toast.error('Seems you\'re offline!','Offline',this.options.error);
         })
