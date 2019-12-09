@@ -27,3 +27,4 @@ src/services/Firebase.txt
 .env.production
 .env.development
 droidcon.co.ke-20190624T160149.json
+/.firebase

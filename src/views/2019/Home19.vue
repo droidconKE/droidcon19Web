@@ -37,7 +37,7 @@
                                         <!-- <div class="lgx-video-area"> -->
                                             <div class="lgx-video-area">
                                                 <!-- <a class="lgx-btn lgx-btn-red" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a> -->
-                                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="http://bit.ly/droidconKE20Tickets">Get Your Ticket</a>
+                                                <a class="lgx-btn lgx-btn-orange" target="_blank" href="http://bit.ly/droidconKE20">Get Your Ticket</a>
                                             </div>
                                            <div class="lgx-video-area">
                                                

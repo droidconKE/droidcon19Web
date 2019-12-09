@@ -3,7 +3,7 @@
         <ul v-if="year === '2020'" class="nav navbar-nav lgx-nav">
             <li><a href="/" :class="['lgx-scroll', path === '/' ? 'active' : '']">Home</a>
             <li><li><router-link class="lgx-scroll" to="/about">About</router-link></li>
-            <li><a class="lgx-scroll" href="http://bit.ly/droidconKE20Tickets" target="_blank">Get Your Ticket</a></li>
+            <li><a class="lgx-scroll" href="http://bit.ly/droidconKE20" target="_blank">Get Your Ticket</a></li>
             <!-- <li><a class="lgx-scroll" href="https://sessionize.com/droidconke/" target="_blank">Submit A Talk</a></li> -->
             <li><a class="lgx-scroll" href="mailto:frank@droidcon.co.ke?Subject=sponsor%20droidconKE" target="_top">sponsor droidconKE</a></li>
             <li>
