@@ -112,7 +112,8 @@ import firebase from './services/Firebase';
 import LoginModal from '@/components/LoginModal.vue';
 import EventFeedback from '@/components/EventFeedback.vue';
 import NavLinks from '@/components/NavLinks.vue';
-
+import VueConfetti from 'vue-confetti';
+Vue.use(VueConfetti);
 Vue.use(VueIziToast);
 export default {
     components: {
@@ -177,6 +178,49 @@ export default {
             }
         }
     },
+    // mounted() {
+    //     this.$confetti.start({
+    //         particles: [
+    //             {
+    //                 type: 'rect',
+    //                 colors: [
+    //                     '#774789',
+    //                     // '#fff',
+    //                     '#6CB08D',
+    //                     // '#DCBA42',
+    //                     '#EE4028',
+    //                 ],
+    //             },
+    //             {
+    //                 type: 'circle',
+    //                 colors: [
+    //                     '#774789',
+    //                     // '#fff',
+    //                     '#6CB08D',
+    //                     // '#DCBA42',
+    //                     '#EE4028',
+    //                 ],
+    //             },
+    //             {
+    //                 type: 'image',
+    //                 url: 'https://droidcon.co.ke/assets/img/about-logo.png',
+    //                 size: 10,
+    //             },
+    //         ],
+    //         defaultDropRate: 5,
+    //         defaultSize: 9,
+    //         // defaultColors: [
+    //         //     '#774789',
+    //         //     '#fff',
+    //         //     '#6CB08D',
+    //         //     '#DCBA42',
+    //         //     '#EE4028',
+    //         // ],
+    //     });
+    //     setTimeout(() => {
+    //         this.$confetti.stop();
+    //     }, 7000);
+    // },
     created(){
         // Handle incoming messages. Called when:
         // - a message is received while the app has focus
